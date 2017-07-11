@@ -1,0 +1,27 @@
+﻿
+@{
+     Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+
+<div id="menuMain">
+    @{Html.RenderAction("partialMenuProduct", "leftMain");}
+    @{Html.RenderAction("partialHangGia", "leftMain");}    
+    @{Html.RenderAction("partialNewsHomes", "leftMain");}
+    <div id="baogia">
+        <div class="nvarMenu">
+            Bảng báo giá
+        </div>
+        <div id="contentBaogia">
+            <a href="/Bao-gia-tan-a-dai-thanh" title="Báo giá sản phẩm đại thành">
+                <img src="~/Content/Display/icon/bang-gia.png" alt="Bảng giá" /></a>
+         </div>
+
+    </div>
+    @{Html.RenderAction("adwPartial", "leftMain");}
+</div>
+<div id="mainContent">
+    @{Html.RenderAction("slidePartial", "Default");}
+    @{Html.RenderAction("listProductHomesPartial", "product");}
+</div>
+@Html.Raw(ViewBag.h1)
+ 

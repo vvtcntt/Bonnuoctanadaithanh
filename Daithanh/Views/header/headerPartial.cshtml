@@ -1,0 +1,48 @@
+﻿@model Daithanh.Models.tblConfig
+
+<div id="banner">
+    <div id="top">
+        <p class="hotline">Miền Nam : <span>@Model.Mobile - @Model.Hotline</span> @Html.Raw(ViewBag.resultHotline)</p>
+    </div>
+    <div id="contentBanner">
+        <div id="leftBanner">
+            <a href="/" title="Logo Tân Á Đại thành"><img src="@Model.Logo" alt="Tân Á Đại thành" /></a>
+        </div>
+        <div id="centerBanner">
+            <span class="sp1">Tập đoàn tân á đại thành</span>
+            <span class="sp2">@Model.Name</span>
+        </div>
+        <div id="rightBanner">
+@using (Html.BeginForm("CommandSearch", "header", FormMethod.Post, new { @class = "FromSearch" }))
+{
+            <div id="boxSearch">
+                <input type="search" class="txtSearch" id="txtSearch" name="txtsearch" placeholder="Nhập tìm kiếm ..." />
+                <button type="submit" id="btnSearch" name="btnSearch" class="btnSearch">Tìm kiếm</button>
+                <a href="/gio-hang" title="giỏ hàng" rel="nofollow"> (0) </a>
+            </div>
+            <span class="note">Ví dụ : 1000 lít, 2000 lít, 3000 lít ....</span>
+}
+        </div>  <div class="Clear"></div>
+    </div>
+    <div id="menu">
+        <ul class="ul1">
+            <li><a href="/" title="Trang chủ">Trang chủ</a></li>
+            <li><a href="/Gioi-thieu" title="giới thiệu" rel="nofollow">Giới thiệu</a></li>
+            <li>
+                <a href="javascript:void(0)" title="Sản phẩm" rel="nofollow">Sản phẩm</a>
+                <ul class="ul2">
+                    @Html.Raw(ViewBag.result)
+                    
+                </ul>
+            </li>
+            <li><a href="/He-thong-phan-phoi" title="Hệ thống phân phối">Hệ thống phân phối</a></li>
+            <li><a href="/Dich-vu" title="Dịch vụ">Dịch vụ</a></li>
+            <li><a href="/Khuyen-mai" title="Khuyến mại">Khuyến mại</a></li>
+            <li><a href="/Tin-tuc" title="Tin tức">Tin tức</a></li>
+            <li class="td"><a href="/Tuyen-dung" title="Tuyển dụng">tuyển dụng</a></li>
+            <li class="lh"><a href="/Lien-he" title="Liên hệ" rel="nofollow">Liên hệ</a></li>
+        </ul>
+        <div class="Clear"></div>
+    </div>
+
+</div>

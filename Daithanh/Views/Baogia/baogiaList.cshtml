@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+
+<div id="main">
+    <div class="nVar_Product">
+        <nav>@Html.Raw(ViewBag.nUrl)</nav>
+    </div>
+
+
+    <div id="News">
+
+        <div id="LeftNews">
+            @{Html.RenderAction("leftNewsPartial", "news");}
+            <div class="Tear_Cate">
+                <div class="nVar_Tear_Cate" style="background:#0063a4">
+                    <span>Chính sách & dịch vụ</span>
+                </div>
+                <div class="Content_Tear_Cate1">
+                    <ul>
+                        @Html.Raw(ViewBag.chuoichinhsach)
+                    </ul>
+                </div>
+            </div>
+
+            <div class="Tear_Cate">
+                <div class="nVar_Tear_Cate" style="background:#0063a4">
+                    <span>Tin tức nổi bật</span>
+                </div>
+                <div class="Content_Tear_Cate1">
+                    <ul>
+                        @Html.Raw(ViewBag.chuoinewnews)
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="RightNews">
+            <div class="nVar_News">
+                <span></span><h1>Báo giá sản phẩm Tân Á Đại Thành</h1>
+            </div>
+            
+                @Html.Raw(ViewBag.result)
+            
+
+
+        </div>
+    </div>
+
+    <div class="Clear"></div>
+</div>

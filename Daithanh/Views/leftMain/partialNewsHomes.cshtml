@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Daithanh.Models.tblNew>
+<div id="newsHomes">
+    <div class="nvarMenu">
+        Tin tức - Sự kiện
+    </div>
+    <div id="contentNewsHomes">
+        @foreach(var item in Model)
+        {
+            <div class="tearNewsHomes">
+            <h3><a href="/news/@item.Tag" title="@item.Name">@item.Name</a></h3>
+            <div class="contentTearNewsHomes">
+                <a href="/news/@item.Tag" title="@item.Name"><img src="@item.Images" alt="@item.Name" /></a>
+                @if(item.Description.Length>100)
+                {
+                    <span class="name">@item.Description.Substring(0,100)....</span>
+                }
+                else
+                {
+                     <span class="name">@item.Description</span>
+                }
+                
+            </div>
+        </div>
+        }
+        
+       
+    </div>
+</div>

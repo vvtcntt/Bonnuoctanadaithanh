@@ -1,0 +1,37 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+@using PagedList.Mvc;
+@model PagedList.IPagedList<Daithanh.Models.tblProduct>
+<div id="products">
+    <div class="nVar_Product">
+        <nav> @Html.Raw(ViewBag.nUrl)</nav>
+    </div>
+    <div id="menuMain">
+        @{Html.RenderAction("partialMenuProduct", "leftMain");}
+        @{Html.RenderAction("partialHangGia", "leftMain");}
+
+        <div id="baogia">
+            <div class="nvarMenu">
+                Bảng báo giá
+            </div>
+            <div id="contentBaogia">
+                <a href="/Bao-gia-san-pham-dai-thanh" title="Báo giá sản phẩm đại thành">
+                    <img src="~/Content/Display/icon/bang-gia.png" alt="Bảng giá" />
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <div id="mainContent">
+       
+        <div id="productHomes">
+
+            @Html.Raw(ViewBag.result)
+
+ 
+
+        </div>
+    </div>
+    <div class="Clear"></div>
+</div>

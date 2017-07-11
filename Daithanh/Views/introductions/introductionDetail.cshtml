@@ -1,0 +1,44 @@
+﻿@{
+
+    Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+@model Daithanh.Models.tblNew
+<div class="nVar_Product">
+    <nav>@Html.Raw(ViewBag.nUrl)</nav>
+</div>
+
+<style>
+    .visible-lg, .visible-md, .visible-sm, .visible-xs {
+        display: block !important;
+    }
+
+    .col-md-6 {
+        width: 100% !important;
+    }
+</style>
+<div id="News">
+    <div id="LeftNews">
+        @{Html.RenderAction("leftNewsPartial", "News");}
+    </div>
+    <div id="RightNews">
+        <div class="nVar_NewsDetail">
+            <h1>@Model.Name</h1>
+            <div class="Clear"></div>
+            <div class="toolbar"><span class="Cate"><span></span>@ViewBag.NameMenu</span><span class="Cata"><span></span>Thời gian gửi: @Model.DateCreate</span><span class="Account"><span></span>@ViewBag.Username</span> </div>
+        </div>
+        <div class="NewsDetail">
+            <div class="Des_Detail">
+                @Model.Description
+
+            </div>
+            @Html.Raw(ViewBag.chuoinew)
+            <div class="Content_Detail">
+                @Html.Raw(Model.Content)
+            </div>
+         </div>
+         
+        
+    </div>
+
+</div>
+

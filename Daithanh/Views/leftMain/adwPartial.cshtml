@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Daithanh.Models.tblImage>
+<div id="adw">
+    <div class="nvarMenu">
+        Chuyên mục quảng cáo
+    </div>
+    <div id="contentAdw">
+        @foreach(var item in Model)
+        {
+             <a href="@item.Url" title="@item.Name"><img src="@item.Images" alt="@item.Name" /></a>
+        }
+       
+ 
+    </div>
+</div>
